@@ -6,7 +6,16 @@
   <img src="./assets/hero.svg" width="100%" alt="Launch Hirukshanan Interactive Cyber Terminal"/>
 </a>
 
-[![Launch Terminal](https://img.shields.io/badge/$_LAUNCH_INTERACTIVE_TERMINAL-00D9FF?style=for-the-badge&logo=gnometerminal&logoColor=black)](https://hirukshanan.github.io/Hirukshanan/)
+
+<br>
+
+<p align="center">
+  <a href="https://hirukshanan.github.io/Hirukshanan/">
+    <code>visitor@hirukshanan:~$ ./launch-terminal ↗</code>
+  </a>
+</p>
+
+
 
 
 ### 💻 Full Stack • 🤖 AI/ML • 🛡️ Cybersecurity • 🎮 Game Development
