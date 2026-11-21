@@ -9,11 +9,15 @@
 
 <br>
 
+
 <p align="center">
   <a href="https://hirukshanan.github.io/Hirukshanan/">
-    <code>visitor@hirukshanan:~$ ./launch-terminal ↗</code>
+    <img src="./assets/terminal-link.svg"
+         width="490"
+         alt="Launch Interactive Terminal"/>
   </a>
 </p>
+
 
 
 
