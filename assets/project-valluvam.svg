@@ -1,0 +1,161 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="980" height="290"
+     viewBox="0 0 980 290">
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0"
+                    x2="1" y2="1">
+      <stop offset="0" stop-color="#090E1C"/>
+      <stop offset="1" stop-color="#14243A"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0"
+                    x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5"
+                      result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main Card -->
+  <rect x="2" y="2" width="976" height="286"
+        rx="20" fill="url(#bg)"
+        stroke="#28556A" stroke-width="2"/>
+
+  <!-- Top Accent -->
+  <rect x="28" y="24" width="5" height="36"
+        rx="2" fill="#22D3EE"/>
+
+  <text x="48" y="39"
+        font-family="monospace"
+        font-size="12" fill="#22D3EE">
+    PROJECT // 001
+  </text>
+
+  <text x="48" y="66"
+        font-family="Arial, sans-serif"
+        font-size="14" fill="#94A3B8">
+    FULL STACK DEVELOPMENT
+  </text>
+
+  <!-- Project Title -->
+  <text x="48" y="125"
+        font-family="Arial, sans-serif"
+        font-size="43" font-weight="bold"
+        fill="#F1F5F9">
+    VALLUVAM
+  </text>
+
+  <!-- Description -->
+  <text x="48" y="159"
+        font-family="Arial, sans-serif"
+        font-size="16" fill="#94A3B8">
+    A nonprofit website and administration platform.
+  </text>
+
+  <text x="48" y="184"
+        font-family="Arial, sans-serif"
+        font-size="15" fill="#94A3B8">
+    Volunteer management, events and community support.
+  </text>
+
+  <!-- Tech Badges -->
+  <g font-family="monospace"
+     font-size="13" text-anchor="middle">
+
+    <rect x="48" y="208" width="92"
+          height="29" rx="7" fill="#12374A"/>
+    <text x="94" y="227"
+          fill="#61DAFB">React</text>
+
+    <rect x="151" y="208" width="100"
+          height="29" rx="7" fill="#183D2A"/>
+    <text x="201" y="227"
+          fill="#6EE7B7">Node.js</text>
+
+    <rect x="262" y="208" width="112"
+          height="29" rx="7" fill="#283047"/>
+    <text x="318" y="227"
+          fill="#C4B5FD">Express</text>
+
+    <rect x="385" y="208" width="112"
+          height="29" rx="7" fill="#173C32"/>
+    <text x="441" y="227"
+          fill="#4ADE80">MongoDB</text>
+  </g>
+
+  <!-- Architecture Visual -->
+  <rect x="630" y="43" width="310"
+        height="184" rx="14"
+        fill="#101B2E" stroke="#253C56"/>
+
+  <text x="655" y="68"
+        font-family="monospace"
+        font-size="12" fill="#64748B">
+    SYSTEM ARCHITECTURE
+  </text>
+
+  <!-- Connected Nodes -->
+  <path d="M709 134 H860"
+        stroke="#22D3EE"
+        stroke-width="2"
+        stroke-dasharray="5 5"/>
+
+  <circle cx="709" cy="134" r="30"
+          fill="#172F42" stroke="#22D3EE"
+          stroke-width="2"/>
+
+  <text x="709" y="139"
+        text-anchor="middle"
+        font-family="monospace"
+        font-size="14" font-weight="bold"
+        fill="#67E8F9">UI</text>
+
+  <circle cx="860" cy="134" r="30"
+          fill="#272340" stroke="#A78BFA"
+          stroke-width="2"/>
+
+  <text x="860" y="139"
+        text-anchor="middle"
+        font-family="monospace"
+        font-size="14" font-weight="bold"
+        fill="#C4B5FD">API</text>
+
+  <text x="709" y="184"
+        text-anchor="middle"
+        fill="#94A3B8"
+        font-family="monospace"
+        font-size="12">React</text>
+
+  <text x="860" y="184"
+        text-anchor="middle"
+        fill="#94A3B8"
+        font-family="monospace"
+        font-size="12">Express</text>
+
+  <!-- Bottom -->
+  <path d="M30 253 H950" stroke="#273449"/>
+
+  <text x="48" y="275"
+        font-family="monospace"
+        font-size="13" fill="#34D399">
+    $ open projects/valluvam
+  </text>
+
+  <text x="938" y="275"
+        text-anchor="end"
+        font-family="monospace"
+        font-size="12" fill="#22D3EE">
+    VIEW REPOSITORY ↗
+  </text>
+
+</svg>

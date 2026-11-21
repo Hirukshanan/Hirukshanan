@@ -73,3 +73,74 @@
 </details>
 
 <br>
+
+
+<!-- FEATURED PROJECTS -->
+
+<br>
+
+<h2 align="center">🚀 FEATURED PROJECTS</h2>
+
+<p align="center">
+  <i>Real projects. Real code. Built with curiosity.</i>
+</p>
+
+<br>
+
+<!-- PROJECT 01: VALLUVAM -->
+
+<a href="https://github.com/Hirukshanan/Valluvam">
+  <img
+    src="./assets/project-valluvam.svg"
+    width="100%"
+    alt="Valluvam - MERN Stack Nonprofit Platform"
+  />
+</a>
+
+<br>
+
+<!-- PROJECT 02: PRICEWISE -->
+
+<a href="https://github.com/Hirukshanan/PriceWise">
+  <img
+    src="./assets/project-pricewise.svg"
+    width="100%"
+    alt="PriceWise - Smart Price Comparison App"
+  />
+</a>
+
+<br>
+
+<!-- PROJECT 03: VEIL OF VEYRA -->
+
+<a href="https://github.com/Hirukshanan/veil-of-veyra">
+  <img
+    src="./assets/project-veil-of-veyra.svg"
+    width="100%"
+    alt="Veil of Veyra - Fantasy Action RPG"
+  />
+</a>
+
+<br>
+
+<p align="center">
+  <a href="https://github.com/Hirukshanan?tab=repositories">
+    <b>Explore All My Repositories</b>
+  </a>
+</p>
+
+<br>
+
+<p align="center">
+  <sub>
+    Explore these projects through my interactive terminal
+  </sub>
+</p>
+
+<p align="center">
+  <a href="https://hirukshanan.github.io/Hirukshanan/">
+    <code>$ cd projects &amp;&amp; ls</code>
+  </a>
+</p>
+
+<br>

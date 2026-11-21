@@ -1,0 +1,213 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="980" height="290"
+     viewBox="0 0 980 290">
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0"
+                    x2="1" y2="1">
+      <stop offset="0" stop-color="#090E1C"/>
+      <stop offset="1" stop-color="#0D2925"/>
+    </linearGradient>
+
+    <radialGradient id="light">
+      <stop offset="0" stop-color="#6EE7B7"
+            stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#34D399"
+            stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5"
+                      result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main Card -->
+  <rect x="2" y="2"
+        width="976" height="286"
+        rx="20"
+        fill="url(#bg)"
+        stroke="#267F65"
+        stroke-width="2"/>
+
+  <!-- Top Accent -->
+  <rect x="28" y="24"
+        width="5" height="36"
+        rx="2" fill="#34D399"/>
+
+  <!-- Project Number -->
+  <text x="48" y="39"
+        font-family="monospace"
+        font-size="12"
+        fill="#34D399">
+    PROJECT // 003
+  </text>
+
+  <!-- Category -->
+  <text x="48" y="66"
+        font-family="Arial, sans-serif"
+        font-size="14"
+        fill="#94A3B8">
+    GAME DEVELOPMENT
+  </text>
+
+  <!-- Project Title -->
+  <text x="48" y="125"
+        font-family="Arial, sans-serif"
+        font-size="40"
+        font-weight="bold"
+        fill="#F1F5F9">
+    VEIL OF VEYRA
+  </text>
+
+  <!-- Description -->
+  <text x="48" y="159"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#94A3B8">
+    A third-person fantasy action RPG.
+  </text>
+
+  <text x="48" y="184"
+        font-family="Arial, sans-serif"
+        font-size="15"
+        fill="#94A3B8">
+    Explore a demon-haunted island, battle enemies and reclaim lanterns.
+  </text>
+
+  <!-- Technology Badges -->
+  <g font-family="monospace"
+     font-size="13"
+     text-anchor="middle">
+
+    <rect x="48" y="208"
+          width="100" height="29"
+          rx="7" fill="#174338"/>
+    <text x="98" y="227"
+          fill="#6EE7B7">Godot 4</text>
+
+    <rect x="159" y="208"
+          width="112" height="29"
+          rx="7" fill="#193F50"/>
+    <text x="215" y="227"
+          fill="#67E8F9">GDScript</text>
+
+    <rect x="282" y="208"
+          width="82" height="29"
+          rx="7" fill="#28344A"/>
+    <text x="323" y="227"
+          fill="#C4B5FD">3D RPG</text>
+
+    <rect x="375" y="208"
+          width="92" height="29"
+          rx="7" fill="#214134"/>
+    <text x="421" y="227"
+          fill="#A7F3D0">Android</text>
+  </g>
+
+  <!-- Fantasy Visual Panel -->
+  <rect x="630" y="42"
+        width="310" height="187"
+        rx="14"
+        fill="#0B201E"
+        stroke="#275B4F"/>
+
+  <text x="649" y="66"
+        font-family="monospace"
+        font-size="12"
+        fill="#6EE7B7">
+    THE ISLAND OF VEYRA
+  </text>
+
+  <!-- Distant Mountains -->
+  <path d="M635 176 L686 111 L730 159
+           L782 94 L842 164
+           L890 125 L936 179"
+        fill="#173F37"/>
+
+  <!-- Foreground Landscape -->
+  <path d="M635 183
+           Q690 161 736 182
+           Q794 197 842 170
+           Q900 155 935 184
+           V224 H635 Z"
+        fill="#174B3F"/>
+
+  <!-- Ancient Ruins -->
+  <path d="M677 172 V136 H692 V172
+           M707 172 V129 H722 V172
+           M672 136 H727"
+        stroke="#4D8070"
+        stroke-width="5"
+        fill="none"/>
+
+  <!-- Glowing Lantern -->
+  <circle cx="799" cy="142"
+          r="53" fill="url(#light)"/>
+
+  <g stroke="#A7F3D0"
+     stroke-width="2"
+     fill="none">
+
+    <path d="M787 125 H811
+             L817 133 V158
+             H781 V133 Z"/>
+
+    <path d="M791 125
+             Q799 112 807 125"/>
+
+    <path d="M795 158 V165
+             H803 V158"/>
+
+  </g>
+
+  <path d="M799 132
+           Q786 143 799 153
+           Q812 143 799 132 Z"
+        fill="#34D399"
+        filter="url(#glow)"/>
+
+  <!-- Stars -->
+  <g fill="#6EE7B7">
+    <circle cx="665" cy="93" r="1.5"/>
+    <circle cx="719" cy="84" r="1.5"/>
+    <circle cx="854" cy="91" r="1.5"/>
+    <circle cx="910" cy="108" r="1.5"/>
+  </g>
+
+  <!-- Game Motto -->
+  <text x="785" y="209"
+        text-anchor="middle"
+        font-family="monospace"
+        font-size="11"
+        fill="#6EE7B7">
+    EXPLORE • FIGHT • RECLAIM
+  </text>
+
+  <!-- Footer Divider -->
+  <path d="M30 253 H950"
+        stroke="#273449"/>
+
+  <!-- Terminal Command -->
+  <text x="48" y="275"
+        font-family="monospace"
+        font-size="13"
+        fill="#34D399">
+    $ open projects/veil-of-veyra
+  </text>
+
+  <!-- Repository Label -->
+  <text x="938" y="275"
+        text-anchor="end"
+        font-family="monospace"
+        font-size="12"
+        fill="#6EE7B7">
+    VIEW REPOSITORY ↗
+  </text>
+
+</svg>

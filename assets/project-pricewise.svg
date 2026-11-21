@@ -1,0 +1,245 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="980" height="290"
+     viewBox="0 0 980 290">
+
+  <defs>
+    <!-- Dark Cyber Background -->
+    <linearGradient id="bg" x1="0%" y1="0%"
+                    x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090E1C"/>
+      <stop offset="100%" stop-color="#1A1639"/>
+    </linearGradient>
+
+    <!-- Violet Neon Accent -->
+    <linearGradient id="accent" x1="0%" y1="0%"
+                    x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+
+    <filter id="glow"
+            x="-30%" y="-30%"
+            width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4"
+                      result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main Card -->
+  <rect x="2" y="2"
+        width="976" height="286"
+        rx="20"
+        fill="url(#bg)"
+        stroke="#6D5AAF"
+        stroke-width="2"/>
+
+  <!-- Top Accent -->
+  <rect x="28" y="24"
+        width="5" height="36"
+        rx="2" fill="#A78BFA"/>
+
+  <!-- Project Number -->
+  <text x="48" y="39"
+        font-family="monospace"
+        font-size="12"
+        fill="#C4B5FD">
+    PROJECT // 002
+  </text>
+
+  <!-- Category -->
+  <text x="48" y="66"
+        font-family="Arial, sans-serif"
+        font-size="14"
+        fill="#94A3B8">
+    FRONTEND ENGINEERING
+  </text>
+
+  <!-- Project Title -->
+  <text x="48" y="125"
+        font-family="Arial, sans-serif"
+        font-size="43"
+        font-weight="bold"
+        fill="#F1F5F9">
+    PRICEWISE
+  </text>
+
+  <!-- Description -->
+  <text x="48" y="159"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#94A3B8">
+    Smart price comparison web application.
+  </text>
+
+  <text x="48" y="184"
+        font-family="Arial, sans-serif"
+        font-size="15"
+        fill="#94A3B8">
+    Compare simulated sellers, save favourites and track deals.
+  </text>
+
+  <!-- Technology Badges -->
+  <g font-family="monospace"
+     font-size="13"
+     text-anchor="middle">
+
+    <!-- Vue -->
+    <rect x="48" y="208"
+          width="89" height="29"
+          rx="7" fill="#173D35"/>
+    <text x="92" y="227"
+          fill="#6EE7B7">Vue 3</text>
+
+    <!-- TypeScript -->
+    <rect x="148" y="208"
+          width="120" height="29"
+          rx="7" fill="#173451"/>
+    <text x="208" y="227"
+          fill="#60A5FA">TypeScript</text>
+
+    <!-- Tailwind -->
+    <rect x="279" y="208"
+          width="110" height="29"
+          rx="7" fill="#12374A"/>
+    <text x="334" y="227"
+          fill="#67E8F9">Tailwind</text>
+
+    <!-- Vite -->
+    <rect x="400" y="208"
+          width="80" height="29"
+          rx="7" fill="#302448"/>
+    <text x="440" y="227"
+          fill="#C4B5FD">Vite</text>
+
+  </g>
+
+  <!-- Price Comparison Visual Panel -->
+  <rect x="620" y="42"
+        width="320" height="187"
+        rx="14"
+        fill="#11192E"
+        stroke="#3D3560"/>
+
+  <text x="642" y="67"
+        font-family="monospace"
+        font-size="12"
+        fill="#A78BFA">
+    COMPARISON ENGINE
+  </text>
+
+  <!-- Seller 1 -->
+  <rect x="640" y="86"
+        width="135" height="74"
+        rx="9"
+        fill="#17243A"
+        stroke="#3178C6"/>
+
+  <circle cx="655" cy="102"
+          r="4" fill="#60A5FA"/>
+
+  <text x="665" y="106"
+        font-family="Arial, sans-serif"
+        font-size="12"
+        font-weight="bold"
+        fill="#F1F5F9">
+    Global Mart
+  </text>
+
+  <text x="655" y="131"
+        font-family="monospace"
+        font-size="10"
+        fill="#94A3B8">
+    SIMULATED SELLER
+  </text>
+
+  <text x="655" y="148"
+        font-family="monospace"
+        font-size="11"
+        fill="#67E8F9">
+    PRICE + SHIPPING
+  </text>
+
+  <!-- Seller 2 -->
+  <rect x="785" y="86"
+        width="135" height="74"
+        rx="9"
+        fill="#17243A"
+        stroke="#A78BFA"/>
+
+  <circle cx="800" cy="102"
+          r="4" fill="#C4B5FD"/>
+
+  <text x="810" y="106"
+        font-family="Arial, sans-serif"
+        font-size="12"
+        font-weight="bold"
+        fill="#F1F5F9">
+    Local Express
+  </text>
+
+  <text x="800" y="131"
+        font-family="monospace"
+        font-size="10"
+        fill="#94A3B8">
+    SIMULATED SELLER
+  </text>
+
+  <text x="800" y="148"
+        font-family="monospace"
+        font-size="11"
+        fill="#C4B5FD">
+    PRICE + SHIPPING
+  </text>
+
+  <!-- Connection Lines -->
+  <path d="M708 161 V176 H780
+           M852 161 V176 H780
+           M780 176 V184"
+        stroke="#A78BFA"
+        stroke-width="1.5"
+        fill="none"
+        stroke-dasharray="4 3"/>
+
+  <!-- Best Deal Output -->
+  <rect x="666" y="184"
+        width="228" height="30"
+        rx="8"
+        fill="#173D35"
+        stroke="#34D399"/>
+
+  <text x="780" y="203"
+        text-anchor="middle"
+        font-family="monospace"
+        font-size="12"
+        font-weight="bold"
+        fill="#6EE7B7">
+    BEST DEAL ENGINE
+  </text>
+
+  <!-- Bottom Divider -->
+  <path d="M30 253 H950"
+        stroke="#273449"/>
+
+  <!-- Terminal Command -->
+  <text x="48" y="275"
+        font-family="monospace"
+        font-size="13"
+        fill="#34D399">
+    $ open projects/pricewise
+  </text>
+
+  <!-- Repository Label -->
+  <text x="938" y="275"
+        text-anchor="end"
+        font-family="monospace"
+        font-size="12"
+        fill="#C4B5FD">
+    VIEW REPOSITORY ↗
+  </text>
+
+</svg>
