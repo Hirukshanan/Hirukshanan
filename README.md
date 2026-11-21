@@ -144,3 +144,18 @@
 </p>
 
 <br>
+
+
+<br>
+
+<h2 align="center">🔥 CODING STREAK</h2>
+
+<p align="center">
+  <img
+    src="https://streak-stats.demolab.com?user=Hirukshanan&amp;theme=dark&amp;background=090E1C&amp;ring=22D3EE&amp;fire=34D399&amp;currStreakNum=22D3EE&amp;currStreakLabel=34D399&amp;sideNums=A78BFA&amp;sideLabels=94A3B8&amp;dates=94A3B8&amp;stroke=273449&amp;hide_border=true&amp;hide_total_contributions=true"
+    width="550"
+    alt="Hirukshanan GitHub Coding Streak"
+  />
+</p>
+
+<br>
