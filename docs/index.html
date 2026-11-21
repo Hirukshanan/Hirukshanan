@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HIRUKSHANAN.DEV | Terminal</title>
+  <style>
+    :root {
+      --bg: #090e1c;
+      --panel: #131f32;
+      --cyan: #22d3ee;
+      --green: #34d399;
+      --purple: #a78bfa;
+      --muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 28px 14px;
+      background: #171730;
+      color: #f1f5f9;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 24px;
+      background: var(--bg);
+      border-radius: 24px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #29364d;
+      padding-bottom: 25px;
+      font: 12px monospace;
+      gap: 12px;
+    }
+
+    .online { color: var(--green); }
+    .cyan { color: var(--cyan); }
+
+    .intro { padding: 42px 0 25px; }
+
+    h1 {
+      font-size: clamp(30px, 6vw, 52px);
+      margin: 12px 0 4px;
+    }
+
+    h2 {
+      color: var(--purple);
+      margin: 0 0 12px;
+      font-size: clamp(18px, 3vw, 25px);
+    }
+
+    .intro p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .tags {
+      color: var(--cyan);
+      font-family: monospace;
+      line-height: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .terminal {
+      margin-top: 20px;
+      background: var(--panel);
+      border: 1px solid #26374f;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .terminal-header {
+      padding: 13px 18px;
+      background: #19283e;
+      color: var(--muted);
+      font: 12px monospace;
+    }
+
+    #screen {
+      min-height: 200px;
+      max-height: 380px;
+      overflow-y: auto;
+      padding: 18px;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font: 14px/1.7 monospace;
+      color: #cbd5e1;
+    }
+
+    .line { margin-bottom: 10px; }
+    .prompt { color: var(--green); }
+    .output { color: var(--muted); }
+    .command { color: #e2e8f0; }
+
+    form {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 12px 18px 18px;
+      font-family: monospace;
+    }
+
+    input {
+      flex: 1;
+      min-width: 0;
+      background: transparent;
+      border: 0;
+      outline: none;
+      color: white;
+      font: 15px monospace;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .card {
+      background: #17243a;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .card strong {
+      color: var(--cyan);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .cards { grid-template-columns: 1fr; }
+      .container { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <span><span class="cyan">▣</span> HIRUKSHANAN.DEV</span>
+      <span class="online">● SYSTEM ONLINE</span>
+    </header>
+
+    <section class="intro">
+      <b class="cyan">HELLO WORLD, I'M</b>
+      <h1>HIRUKSHANAN</h1>
+      <h2>Computer Engineering Undergraduate</h2>
+      <p>Building intelligent software, secure systems
+         & immersive experiences.</p>
+      <div class="tags">
+        [ Full Stack ] &nbsp;
+        [ AI / ML ] &nbsp;
+        [ Cybersecurity ] &nbsp;
+        [ Game Dev ] &nbsp;
+        [ DevOps ]
+      </div>
+    </section>
+
+    <section class="terminal">
+      <div class="terminal-header">
+        ~/hirukshanan — interactive terminal
+      </div>
+      <div id="screen" aria-live="polite"></div>
+
+      <form id="terminal-form">
+        <span class="prompt" id="prompt">visitor@hirukshanan:~$</span>
+        <input id="command" autocomplete="off"
+               spellcheck="false" aria-label="Terminal command"
+               placeholder="Type help..." autofocus>
+      </form>
+    </section>
+
+    <div class="cards">
+      <div class="card"><strong>FULL STACK</strong>Web Systems</div>
+      <div class="card"><strong>AI / DATA</strong>Intelligence</div>
+      <div class="card"><strong>GAME DEV</strong>Experiences</div>
+    </div>
+  </main>
+
+  <script>
+    const screen = document.getElementById("screen");
+    const input = document.getElementById("command");
+    const prompt = document.getElementById("prompt");
+    const form = document.getElementById("terminal-form");
+
+    let cwd = "~";
+    const history = [];
+    let historyIndex = 0;
+
+    const projects = {
+      valluvam: {
+        description: "MERN nonprofit website and admin platform.",
+        url: "https://github.com/Hirukshanan/Valluvam"
+      },
+      pricewise: {
+        description: "Vue 3 + TypeScript price comparison app.",
+        url: "https://github.com/Hirukshanan/PriceWise"
+      },
+      "veil-of-veyra": {
+        description: "Godot fantasy action RPG in development.",
+        url: "https://github.com/Hirukshanan/veil-of-veyra"
+      }
+    };
+
+    function print(command, result) {
+      const line = document.createElement("div");
+      line.className = "line";
+
+      const title = document.createElement("div");
+      title.className = "command";
+      title.textContent = "visitor@hirukshanan:" + cwd + "$ " + command;
+
+      const output = document.createElement("div");
+      output.className = "output";
+      output.textContent = result;
+
+      line.append(title, output);
+      screen.appendChild(line);
+      screen.scrollTop = screen.scrollHeight;
+    }
+
+    function run(raw) {
+      const command = raw.trim();
+      if (!command) return;
+
+      history.push(command);
+      historyIndex = history.length;
+
+      const [action, ...args] = command.toLowerCase().split(/\s+/);
+      const target = args.join(" ");
+      let result = "";
+
+      switch (action) {
+        case "help":
+          result =
+            "Available commands:\n" +
+            "whoami          About me\n" +
+            "ls              List files\n" +
+            "cd projects     Explore projects\n" +
+            "cd ..           Go back\n" +
+            "pwd             Current directory\n" +
+            "skills          My technologies\n" +
+            "cat <project>   Read project information\n" +
+            "open <project>  Open GitHub repository\n" +
+            "clear           Clear terminal";
+          break;
+
+        case "whoami":
+          result = "Hirukshanan\nComputer Engineering Undergraduate\nUniversity of Ruhuna, Sri Lanka";
+          break;
+
+        case "pwd":
+          result = "/home/hirukshanan" +
+                   (cwd === "~/projects" ? "/projects" : "");
+          break;
+
+        case "ls":
+          result = cwd === "~/projects"
+            ? Object.keys(projects).join("/   ") + "/"
+            : "projects/   about.txt   skills.txt";
+          break;
+
+        case "cd":
+          if (target === "projects" || target === "projects/") {
+            cwd = "~/projects";
+          } else if (target === ".." || target === "~") {
+            cwd = "~";
+          } else {
+            result = "Directory not found: " + target;
+          }
+          break;
+          
+        case "skills":
+          result = "PROGRAMMING LANGUAGES :\n" +
+                   "Python, C++, C#, JavaScript,\n" +
+                   "TypeScript, GDScript, Verilog\n\n" +
+
+                   "WEB DEVELOPMENT :\n" +
+                   "React, Vue, Node.js, Express,\n" +
+                   "HTML, CSS, Tailwind CSS\n\n" +
+
+                   "DEVOPS & AUTOMATION :\n" +
+                   "Jenkins, GitHub Actions,\n" +
+                   "CI/CD Pipelines, Docker, Git\n\n" +
+
+                   "DATABASES & TOOLS :\n" +
+                   "MongoDB, Linux, VS Code\n\n" +
+
+                   "AREAS OF INTEREST :\n" +
+                   "Cybersecurity, AI/ML,\n" +
+                   "Full Stack, Game Development,\n" +
+                   "DevOps";
+          break;
+
+        case "cat":
+          if (projects[target]) {
+            result = projects[target].description + "\n" +
+                     projects[target].url;
+          } else if (target === "about.txt") {
+            result = "Engineer by education. Builder by curiosity.";
+          } else if (target === "skills.txt") {
+            result = "Type 'skills' to view my technologies.";
+          } else {
+            result = "File not found: " + target;
+          }
+          break;
+
+        case "open":
+          if (projects[target]) {
+            window.open(projects[target].url, "_blank", "noopener,noreferrer");
+            result = "Opening " + target + "...";
+          } else {
+            result = "Project not found. Try 'ls'.";
+          }
+          break;
+
+        case "clear":
+          screen.textContent = "";
+          return;
+
+        default:
+          result = "Command not found: " + command +
+                   "\nType 'help' for available commands.";
+      }
+
+      print(command, result);
+      prompt.textContent = "visitor@hirukshanan:" + cwd + "$";
+    }
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      run(input.value);
+      input.value = "";
+    });
+
+    input.addEventListener("keydown", function(event) {
+      if (event.key === "ArrowUp" && historyIndex > 0) {
+        event.preventDefault();
+        input.value = history[--historyIndex];
+      } else if (event.key === "ArrowDown") {
+        event.preventDefault();
+        historyIndex = Math.min(history.length, historyIndex + 1);
+        input.value = history[historyIndex] || "";
+      }
+    });
+
+    print("whoami", "Engineer by education. Builder by curiosity.");
+    print("ls", "projects/   about.txt   skills.txt");
+  </script>
+</body>
+</html>

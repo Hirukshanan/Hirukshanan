@@ -38,9 +38,20 @@
 
   <g font-family="monospace" font-size="15">
     <text x="55" y="290" fill="#67E8F9">[ Full Stack ]</text>
-    <text x="200" y="290" fill="#C4B5FD">[ AI / ML ]</text>
-    <text x="330" y="290" fill="#6EE7B7">[ Cybersecurity ]</text>
-    <text x="520" y="290" fill="#FBBF24">[ Game Dev ]</text>
+    <text x="205" y="290" fill="#C4B5FD">[ AI / ML ]</text>
+    <text x="335" y="290" fill="#6EE7B7">[ Cybersecurity ]</text>
+    <text x="525" y="290" fill="#FBBF24">[ Game Dev ]</text>
+    <text x="685" y="290" fill="#FB7185">[ DevOps ]</text> 
+  </g>
+
+  <!-- Terminal preview -->
+  <rect x="55" y="318" width="890" height="151"
+        rx="15" fill="#131F32"/>
+
+  <g font-family="monospace" font-size="15">
+    <text x="75" y="342" fill="#64748B" font-size="12">
+      ~/hirukshanan/now-building
+    </text>
   </g>
 
   <!-- Terminal preview -->
