@@ -29,3 +29,47 @@
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Hirukshanan)
 
 </div>
+
+
+<br>
+
+
+<br>
+
+<h2 align="center">⚡ TECHNOLOGY CONSTELLATION</h2>
+
+<p align="center">
+  <i>Technologies I work with and explore</i>
+</p>
+
+<details open>
+  <summary><b>💻 Programming Languages</b></summary>
+
+  <br>
+
+  <p align="center">
+    <img
+      src="./assets/tech-languages.svg"
+      width="100%"
+      alt="Hirukshanan Programming Languages"
+    />
+  </p>
+</details>
+
+<br>
+
+<details open>
+  <summary><b>🌐 Web Development, MERN Stack & DevOps</b></summary>
+
+  <br>
+
+  <p align="center">
+    <img
+      src="./assets/tech-stack.svg"
+      width="100%"
+      alt="Hirukshanan MERN Stack and DevOps Technologies"
+    />
+  </p>
+</details>
+
+<br>
